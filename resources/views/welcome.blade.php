@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/bootstrap-datepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
@@ -20,33 +19,39 @@
                     <span><i class="fas fa-envelope mr-1"></i>agadir_devs@gmail.com</span>
                 </div>
                 <div class="col-md text-right">
-                    <a href="{{ route('faq') }}" class="bar-a"><i class="fas fa-question mr-1"></i>FAQ</a>
+                    <a href="#" class="bar-a"><i class="fas fa-question mr-1"></i>FAQ</a>
                 </div>
             </div>
         </div>
     </div>{{-- end upper bar --}}
 
     <div class="main-nav">{{-- start main navbar --}}
-        <div class="container">
-            <div class="nav">
-                <input type="checkbox" id="nav-check">
-                <div class="nav-header">
-                  <div class="nav-title">
-                    <a class="" href="{{ route('home') }}">
+        <nav class="navbar navbar-light">
+            <div class="container">
+                <div class="row">
+                    <a class="navbar-brand" href="/">
                         <span><i class="fas fa-graduation-cap mr-1"></i>Agadir</span><span>Sms</span>
                     </a>
-                  </div>
+                      <div class="navbar-nav ml-auto">
+                        <a class="nav-item mr-2 active" href="/">
+                            <i class="fas fa-home mr-1"></i>Home
+                        </a>
+                        <a class="nav-item mr-2" href="/student">
+                            <i class='fas fa-user-graduate mr-1'></i>Student Space
+                        </a>
+                        <a class="nav-item mr-2" href="/student">
+                            <i class='fas fa-chalkboard-teacher mr-1'></i>Instructor Space
+                        </a>
+                        <a class="nav-item mr-2" href="/student">
+                            <i class='fas fa-user-tie mr-1'></i>Admin Space
+                        </a>
+                        <a class="nav-item mr-2" href="/student">
+                            <i class='fas fa-address-card mr-1'></i>Contact Us
+                        </a>
+                      </div>
                 </div>
-
-                <div class="nav-links ml-auto">
-                  <a class="" href="{{ route('home') }}"><i class="fas fa-home mr-1"></i>Home</a>
-                  <a class="active" href="{{ route('stu') }}"><i class='fas fa-user-graduate mr-1'></i>Student Space</a>
-                  <a class="" href="{{ route('ins') }}"><i class='fas fa-chalkboard-teacher mr-1'></i>Instructor Space</a>
-                  <a class="" href="{{ route('adm') }}"><i class='fas fa-user-tie mr-1'></i>Admin Space</a>
-                  <a class="" href="{{ route('con') }}"><i class='fas fa-address-card mr-1'></i>Contact Us</a>
-                </div>
-              </div>
-        </div>
+            </div>
+        </nav>
     </div>{{-- end main navbar --}}
 
 
@@ -78,3 +83,6 @@
     <script src="{{ asset('/javascript/main.js') }}"></script>
 </body>
 </html>
+
+
+

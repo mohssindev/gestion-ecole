@@ -1,0 +1,34 @@
+@extends('layouts.layout')
+
+@section('title')
+<title>Instructor Space</title>
+@endsection
+
+@section('content')
+<div class="instructor-area">{{-- start instructor area --}}
+    <div class="overlay">
+        <div class="container">
+            <div class="form-container float-right">
+                <i class="fas fa-chalkboard-teacher fa-5x mb-3 mt-3"></i>
+                <h2 class="mb-4">Login</h2>
+                <form class="">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary btn-lg mt-4">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>{{-- end instructor area --}}
+@endsection

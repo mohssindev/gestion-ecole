@@ -15,16 +15,31 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/student', function () {
+    return view('student');
+})->name('stu');
+
+Route::get('/instructor', function () {
+    return view('instructor');
+})->name('ins');
+
+Route::get('/admin', function () {
+    return view('admin');
+})->name('adm');
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('con');
+
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
+Route::get('/student/student_dashboard', function () {
+    return view('student_dashboard');
+})->name('student-dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
