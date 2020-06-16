@@ -37,9 +37,41 @@ Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
 
-Route::get('/student/student_dashboard', function () {
-    return view('student_dashboard');
-})->name('student-dashboard');
 
 Auth::routes();
+ 
 
+// role admin 
+Route::group(['prefix' => '/app','middleware' => 'auth'],function(){
+	Route::group(['prefix' => 'admin','middleware' => 'role:admin'],function(){
+
+		// all route admin
+		//dashboard
+		Route::get('dashboard','HomeController@index')->name('admin-dashboard');
+
+
+	});
+});
+
+// role students 
+Route::group(['prefix' => '/app','middleware' => 'auth'],function(){
+	Route::group(['prefix' => 'students','middleware' => 'role:students'],function(){
+
+		// all route students
+		//dashboard
+		Route::get('dashboard','HomeController@index')->name('students-dashboard');
+
+	});
+});
+
+// role instructor 
+Route::group(['prefix' => '/app','middleware' => 'auth'],function(){
+	Route::group(['prefix' => 'instructor','middleware' => 'role:instructor'],function(){
+
+		// all route instructor
+		//dashboard
+		Route::get('dashboard','HomeController@index')->name('instructor-dashboard');
+
+
+	});
+});

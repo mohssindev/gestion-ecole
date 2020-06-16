@@ -15,6 +15,7 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->string('code_students');
             $table->string('cin');
             $table->string('cne');
             $table->string('nom');

@@ -21,8 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('avatar');
             $table->string('fonction');
-            $table->string('role');
+            $table->string('role')->default('user');
             $table->string('etat');
+            $table->string('code_aff')->unique();
             $table->rememberToken();
             $table->timestamps();
         });
